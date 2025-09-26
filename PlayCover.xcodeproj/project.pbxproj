@@ -577,9 +577,9 @@
 			);
 			inputFileListPaths = (
 			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/PlayTools.xcframework/ios-arm64/PlayTools.framework",
-			);
+            inputPaths = (
+                "$(SRCROOT)/Carthage/Build/PlayTools.xcframework/ios-arm64/PlayTools.framework",
+            );
 			name = "Copy Carthage frameworks";
 			outputFileListPaths = (
 			);
@@ -587,7 +587,8 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PlayTools.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/zsh;
+            shellPath = /bin/zsh;
+            shellPath = /bin/zsh;
             shellScript = "echo \"Skipping Carthage copy-frameworks\"\n";
 		};
 		AAC28F222899A05B005057FB /* Codesign sparkle */ = {
