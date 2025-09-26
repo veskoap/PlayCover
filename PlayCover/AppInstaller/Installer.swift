@@ -100,6 +100,13 @@ class Installer {
 
                 app.info.applicationCategoryType = applicationType
 
+                // Apply known workarounds for NetEase games like Destiny:Rising (com.netease.g108na)
+                if app.info.bundleIdentifier == "com.netease.g108na" {
+                    // This is a common fix for NetEase games that crash due to environment checks.
+                    // Setting the category to 'games' satisfies a missing entitlement or app configuration check.
+                    app.info.applicationCategoryType = .games
+                }
+
                 if !export {
                     // -rwxr-xr-x
                     try app.executable.setBinaryPosixPermissions(0o755)
